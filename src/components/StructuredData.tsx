@@ -11,6 +11,7 @@ export const LocalBusinessSchema = ({ includeReviews = false }: LocalBusinessSch
     "@id": "https://vnprocleaning.com/#business",
     "name": "V & N Cleaning Services",
     "image": "https://vnprocleaning.com/hero-cleaning.jpg",
+    "logo": "https://vnprocleaning.com/VN.svg",
     "description": "Professional residential and commercial cleaning services in Brooklyn, Queens, Manhattan, and NYC. Trusted, reliable cleaners for homes, apartments, and offices.",
     "priceRange": "$$",
     "telephone": "+13473571090",
