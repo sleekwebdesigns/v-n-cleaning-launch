@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/VN.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <NavLink to="/" className="flex items-center space-x-2">
+        <NavLink to="/" className="flex items-center space-x-3">
+          <img src={logo} alt="V & N Cleaning Services Logo" className="h-10 w-10" />
           <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             V & N Cleaning Services
           </span>
