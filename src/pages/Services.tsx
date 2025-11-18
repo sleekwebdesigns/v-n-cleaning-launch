@@ -4,7 +4,12 @@ import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import { Home, Sparkles, Building2, Package, Briefcase, Droplets } from "lucide-react";
 
+import { BreadcrumbSchema, useBreadcrumbs, FAQSchema } from "@/components/StructuredData";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { Helmet } from "react-helmet";
+
 const Services = () => {
+  const breadcrumbs = useBreadcrumbs();
   const services = [
     {
       icon: Home,
@@ -92,9 +97,20 @@ const Services = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Professional Cleaning Services Brooklyn & NYC | V & N Cleaning</title>
+        <meta name="description" content="Full range of cleaning services in Brooklyn, Queens & NYC. Regular, deep, apartment, move-in/move-out cleaning. Book now: (347) 357-1090" />
+        <link rel="canonical" href="https://vnprocleaning.com/services" />
+      </Helmet>
+      <BreadcrumbSchema items={breadcrumbs} />
+      <FAQSchema />
+      
       <Header />
       
       <main className="flex-1">
+        <div className="container">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
         {/* Page Header */}
         <section className="py-16 bg-gradient-primary text-primary-foreground">
           <div className="container text-center">
@@ -110,7 +126,7 @@ const Services = () => {
           <div className="container">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <ServiceCard key={index} {...service} />
+                <ServiceCard key={index} {...service} headingLevel="h2" />
               ))}
             </div>
           </div>

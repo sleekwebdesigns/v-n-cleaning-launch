@@ -6,7 +6,11 @@ import TestimonialCard from "@/components/TestimonialCard";
 import { Sparkles, Home, Building2, Package, Briefcase, CheckCircle2, Users, Clock, Shield, Leaf } from "lucide-react";
 import heroImage from "@/assets/hero-cleaning.jpg";
 
+import { LocalBusinessSchema, BreadcrumbSchema, useBreadcrumbs } from "@/components/StructuredData";
+import { Helmet } from "react-helmet";
+
 const Index = () => {
+  const breadcrumbs = useBreadcrumbs();
   const services = [
     {
       icon: Home,
@@ -76,6 +80,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Professional Home & Apartment Cleaning Brooklyn & NYC | V & N Cleaning Services</title>
+        <meta name="description" content="Reliable, detailed, professional cleaning services in Brooklyn, Queens, Manhattan & NYC. Regular cleaning, deep cleaning, move-in/move-out. Book now: (347) 357-1090" />
+        <link rel="canonical" href="https://vnprocleaning.com/" />
+      </Helmet>
+      <LocalBusinessSchema includeReviews={true} />
+      <BreadcrumbSchema items={breadcrumbs} />
+      
       <Header />
       
       <main className="flex-1">
@@ -167,7 +179,7 @@ const Index = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <ServiceCard key={index} {...service} />
+                <ServiceCard key={index} {...service} headingLevel="h3" />
               ))}
             </div>
           </div>

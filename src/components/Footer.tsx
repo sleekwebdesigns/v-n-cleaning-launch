@@ -1,5 +1,5 @@
-import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import NAP from "./NAP";
 
 const Footer = () => {
   return (
@@ -56,35 +56,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="font-semibold mb-4">Contact Us</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start space-x-2">
-                <MapPin className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">
-                  Serving Brooklyn, Queens & NYC
-                </span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="tel:3473571090" className="text-muted-foreground hover:text-primary transition-colors">
-                  (347) 357-1090
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="mailto:email@vnprocleaning.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  email@vnprocleaning.com
-                </a>
-              </li>
-              <li className="flex items-start space-x-2">
-                <Clock className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">
-                  Mon–Fri: 9:00 AM – 5:00 PM
-                </span>
-              </li>
-            </ul>
-          </div>
+          <NAP />
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
