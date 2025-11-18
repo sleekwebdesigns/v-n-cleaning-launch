@@ -7,16 +7,19 @@ interface ServiceCardProps {
   title: string;
   description: string;
   features: string[];
+  headingLevel?: "h2" | "h3" | "h4";
 }
 
-const ServiceCard = ({ icon: Icon, title, description, features }: ServiceCardProps) => {
+const ServiceCard = ({ icon: Icon, title, description, features, headingLevel = "h3" }: ServiceCardProps) => {
+  const HeadingTag = headingLevel;
+  
   return (
     <Card className="h-full transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
       <CardHeader>
         <div className="w-12 h-12 rounded-lg bg-primary-light flex items-center justify-center mb-4">
           <Icon className="h-6 w-6 text-primary" />
         </div>
-        <CardTitle className="text-xl">{title}</CardTitle>
+        <HeadingTag className="text-xl font-semibold tracking-tight">{title}</HeadingTag>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">

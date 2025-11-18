@@ -3,16 +3,32 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Heart, Users, Award } from "lucide-react";
 
+import { BreadcrumbSchema, useBreadcrumbs } from "@/components/StructuredData";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { Helmet } from "react-helmet";
+
 const About = () => {
+  const breadcrumbs = useBreadcrumbs();
+
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>About V & N Cleaning Services | Professional Brooklyn & NYC Cleaners</title>
+        <meta name="description" content="Trusted Brooklyn-based cleaning company serving NYC. Professional, reliable cleaners for homes and apartments. Learn about our mission and values. Call (347) 357-1090" />
+        <link rel="canonical" href="https://vnprocleaning.com/about" />
+      </Helmet>
+      <BreadcrumbSchema items={breadcrumbs} />
+      
       <Header />
       
       <main className="flex-1">
-        {/* Page Header */}
+        <div className="container">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
+        {/* Hero Section */}
         <section className="py-16 bg-gradient-primary text-primary-foreground">
           <div className="container text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">About V & N Cleaning Services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">About V & N Cleaning Services - Serving Brooklyn & NYC</h1>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
               Your trusted partner for professional cleaning services in NYC
             </p>
