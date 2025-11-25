@@ -101,16 +101,18 @@ const Index = () => {
             />
           </div>
           <div className="container relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Professional Cleaning Services for{" "}
+                Professional Home Cleaning Services in{" "}
                 <span className="bg-gradient-hero bg-clip-text text-transparent">
-                  Homes & Apartments
+                  Brooklyn & NYC
                 </span>
-                {" "}in NYC
               </h1>
+              <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+                V & N Cleaning Services is a professional residential cleaning company serving Brooklyn, Queens, Manhattan, and The Bronx. We specialize in regular home cleaning, deep cleaning, apartment cleaning, and move-in/move-out cleaning for NYC residents. Our trained cleaning professionals serve Park Slope, Williamsburg, Astoria, Upper East Side, and over 15 Brooklyn neighborhoods.
+              </p>
               <p className="text-xl text-muted-foreground mb-8">
-                Trusted, detailed, and reliable cleaning services provided by V & N Cleaning Services
+                Whether you need weekly apartment cleaning in Williamsburg, deep cleaning for your Park Slope townhouse, or move-out cleaning in Astoria, V & N Cleaning Services provides reliable residential cleaning throughout New York City.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild className="bg-gradient-primary text-lg px-8">
@@ -130,9 +132,9 @@ const Index = () => {
         <section className="py-16 bg-muted">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose V & N Cleaning Services?</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                We're committed to providing the highest quality cleaning services with professionalism and care
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Brooklyn Residents Choose V & N Cleaning Services</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto mb-6">
+                Brooklyn homeowners and renters trust V & N Cleaning Services because we understand NYC living. Our cleaning team is trained specifically for Brooklyn apartments, brownstones, and condos. We navigate building requirements in Park Slope co-ops, work efficiently in Williamsburg lofts, and adapt to the unique needs of NYC properties. Every cleaner on our team is background-checked, insured, and experienced with New York City homes.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -185,25 +187,71 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Service Area */}
+        {/* Neighborhood-Specific Content */}
         <section className="py-16 bg-muted">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Areas We Serve</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-                Proudly serving Brooklyn, Queens, Manhattan, The Bronx, and surrounding NYC areas
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Brooklyn & NYC Cleaning Services - Neighborhoods We Serve</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                V & N Cleaning Services proudly serves over 20 Brooklyn neighborhoods, Queens communities, Manhattan areas, and Bronx districts. Our cleaning professionals live and work in New York City, understand the unique needs of NYC apartments and homes, and provide same-day and next-day cleaning throughout the five boroughs.
               </p>
             </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-3">
-                {neighborhoods.map((neighborhood, index) => (
-                  <span 
-                    key={index}
-                    className="px-4 py-2 bg-background rounded-full text-sm font-medium shadow-sm"
-                  >
-                    {neighborhood}
-                  </span>
-                ))}
+            
+            <div className="max-w-4xl mx-auto space-y-8">
+              <div>
+                <h3 className="text-2xl font-semibold mb-4">Brooklyn Cleaning Services</h3>
+                <p className="text-muted-foreground mb-4">
+                  Our Brooklyn cleaning team serves Park Slope, Williamsburg, Brooklyn Heights, DUMBO, Bushwick, Crown Heights, and Prospect Heights. We provide regular cleaning for Brooklyn brownstones, deep cleaning for co-op apartments, and move-out cleaning for rental properties. Whether you need apartment cleaning in Williamsburg or townhouse cleaning in Park Slope, V & N Cleaning Services delivers professional results. Brooklyn residents can book weekly cleaning, bi-weekly cleaning, or one-time deep cleaning services.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {["Brooklyn Heights", "Park Slope", "Williamsburg", "DUMBO", "Bushwick"].map((neighborhood, index) => (
+                    <span key={index} className="px-4 py-2 bg-background rounded-full text-sm font-medium shadow-sm">
+                      {neighborhood}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold mb-4">Queens Cleaning Services</h3>
+                <p className="text-muted-foreground mb-4">
+                  V & N Cleaning Services provides home and apartment cleaning in Astoria, Long Island City, Forest Hills, Flushing, and surrounding Queens neighborhoods. Our Queens cleaning team specializes in condo cleaning, apartment deep cleaning, and move-in cleaning for renters and homeowners. Astoria residents trust us for weekly apartment cleaning, while Forest Hills homeowners rely on our deep cleaning services for larger homes.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {["Astoria", "Long Island City", "Forest Hills", "Flushing"].map((neighborhood, index) => (
+                    <span key={index} className="px-4 py-2 bg-background rounded-full text-sm font-medium shadow-sm">
+                      {neighborhood}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold mb-4">Manhattan Cleaning Services</h3>
+                <p className="text-muted-foreground mb-4">
+                  From the Upper East Side to Midtown and Chelsea, V & N Cleaning Services offers professional cleaning for Manhattan apartments, condos, and co-ops. Our Manhattan cleaning team navigates building requirements, works with doormen and concierges, and provides efficient cleaning for studio apartments to multi-bedroom units. Upper West Side families use our regular cleaning service, while Chelsea professionals book our flexible one-time cleaning.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {["Upper East Side", "Upper West Side", "Midtown", "Chelsea"].map((neighborhood, index) => (
+                    <span key={index} className="px-4 py-2 bg-background rounded-full text-sm font-medium shadow-sm">
+                      {neighborhood}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold mb-4">Bronx Cleaning Services</h3>
+                <p className="text-muted-foreground mb-4">
+                  V & N Cleaning Services serves Riverdale, Fordham, and surrounding Bronx neighborhoods with reliable residential cleaning. Our Bronx cleaning team provides apartment cleaning, house cleaning, and move-out cleaning for renters and homeowners throughout the borough.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {["Riverdale", "Fordham"].map((neighborhood, index) => (
+                    <span key={index} className="px-4 py-2 bg-background rounded-full text-sm font-medium shadow-sm">
+                      {neighborhood}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

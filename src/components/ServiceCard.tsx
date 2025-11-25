@@ -12,6 +12,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ icon: Icon, title, description, features, headingLevel = "h3" }: ServiceCardProps) => {
   const HeadingTag = headingLevel;
+  const paragraphs = description.split('\n\n');
   
   return (
     <Card className="h-full transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
@@ -20,7 +21,11 @@ const ServiceCard = ({ icon: Icon, title, description, features, headingLevel = 
           <Icon className="h-6 w-6 text-primary" />
         </div>
         <HeadingTag className="text-xl font-semibold tracking-tight">{title}</HeadingTag>
-        <CardDescription>{description}</CardDescription>
+        <div className="space-y-3">
+          {paragraphs.map((paragraph, index) => (
+            <CardDescription key={index}>{paragraph}</CardDescription>
+          ))}
+        </div>
       </CardHeader>
       <CardContent className="space-y-4">
         <ul className="space-y-2">
