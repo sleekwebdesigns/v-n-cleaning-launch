@@ -205,6 +205,66 @@ export const BreadcrumbSchema = ({ items }: BreadcrumbSchemaProps) => {
   );
 };
 
+interface ServiceSchemaProps {
+  serviceName: string;
+  serviceType: string;
+  description: string;
+  areaServed: string[];
+  neighborhoods: string[];
+  provider?: string;
+  priceRange?: string;
+  url: string;
+}
+
+export const ServiceSchema = ({ 
+  serviceName, 
+  serviceType, 
+  description, 
+  areaServed, 
+  neighborhoods,
+  provider = "V & N Cleaning Services",
+  priceRange = "$$",
+  url
+}: ServiceSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": serviceType,
+    "name": serviceName,
+    "description": description,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": provider,
+      "telephone": "+13473571090",
+      "email": "email@vnprocleaning.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brooklyn",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": [
+      ...areaServed.map(city => ({
+        "@type": "City",
+        "name": city
+      })),
+      ...neighborhoods.map(neighborhood => ({
+        "@type": "Neighborhood",
+        "name": neighborhood
+      }))
+    ],
+    "url": url,
+    "priceRange": priceRange
+  };
+
+  return (
+    <script type="application/ld+json">
+      {JSON.stringify(schema)}
+    </script>
+  );
+};
+
 export const FAQSchema = () => {
   const schema = {
     "@context": "https://schema.org",
@@ -286,16 +346,32 @@ export const SEOHead = ({ title, description, canonicalUrl, ogImage = "https://l
 export const useBreadcrumbs = () => {
   const location = useLocation();
   const path = location.pathname;
-
-  const breadcrumbs = [{ name: "Home", url: "/" }];
-
+  
+  const breadcrumbs: Array<{ name: string; url: string }> = [
+    { name: "Home", url: "/" }
+  ];
+  
   if (path === "/services") {
     breadcrumbs.push({ name: "Services", url: "/services" });
+  } else if (path.startsWith("/services/")) {
+    breadcrumbs.push({ name: "Services", url: "/services" });
+    const serviceName = path.split("/")[2];
+    const serviceNames: Record<string, string> = {
+      "regular-cleaning": "Regular Cleaning",
+      "deep-cleaning": "Deep Cleaning",
+      "apartment-cleaning": "Apartment Cleaning",
+      "move-in-out-cleaning": "Move-In/Out Cleaning",
+      "office-cleaning": "Office Cleaning"
+    };
+    breadcrumbs.push({ 
+      name: serviceNames[serviceName] || "Service", 
+      url: path 
+    });
   } else if (path === "/about") {
     breadcrumbs.push({ name: "About", url: "/about" });
   } else if (path === "/contact") {
     breadcrumbs.push({ name: "Contact", url: "/contact" });
   }
-
+  
   return breadcrumbs;
 };
