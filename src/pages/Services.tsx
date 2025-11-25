@@ -13,8 +13,8 @@ const Services = () => {
   const services = [
     {
       icon: Home,
-      title: "Regular Cleaning",
-      description: "Keep your home consistently clean and fresh with our regular cleaning services. Perfect for busy professionals and families.",
+      title: "Regular Home Cleaning in Brooklyn & NYC",
+      description: "V & N Cleaning Services provides weekly and bi-weekly regular cleaning for apartments, condos, and houses throughout Brooklyn, Queens, and Manhattan. Our regular cleaning service is designed for busy NYC professionals, families with children, and anyone who wants to maintain a consistently clean home without the hassle. We serve Park Slope apartments, Williamsburg lofts, Astoria condos, Upper East Side co-ops, and homes across all five boroughs.\n\nRegular cleaning from V & N includes dusting all surfaces in your home, vacuuming carpets and area rugs, mopping hardwood and tile floors, deep cleaning bathrooms, sanitizing kitchen counters and sinks, and removing trash. Our Brooklyn-based cleaning team brings all professional-grade supplies and equipment to your property. Regular cleaning typically takes 2-4 hours depending on your home size and is available Monday through Friday throughout NYC.\n\nRegular cleaning is ideal for Brooklyn apartments (studios to 3-bedrooms), Queens townhouses, Manhattan condos, and multi-family homes. Whether you live in a 600 sq ft Williamsburg studio or a 2,000 sq ft Park Slope brownstone, V & N Cleaning Services creates a custom regular cleaning schedule that fits your property type and lifestyle.",
       features: [
         "Dusting all surfaces",
         "Vacuuming and mopping floors",
@@ -26,8 +26,8 @@ const Services = () => {
     },
     {
       icon: Sparkles,
-      title: "Deep Cleaning",
-      description: "Our most thorough cleaning service for when your home needs extra attention. Ideal for seasonal cleaning or special occasions.",
+      title: "Deep Cleaning for Brooklyn Homes & NYC Apartments",
+      description: "V & N Cleaning Services offers comprehensive deep cleaning for Brooklyn brownstones, NYC apartments, and homes throughout all five boroughs. Our deep cleaning service goes beyond regular cleaning to target built-up dirt, grime, and neglected areas in your property. Deep cleaning is perfect for seasonal home refreshes, before hosting guests, after renovations, or when your Brooklyn apartment needs intensive attention.\n\nDeep cleaning includes everything in our regular cleaning service plus baseboards and trim cleaning, inside oven cleaning, inside refrigerator cleaning, interior window washing, cabinet exterior cleaning, and detailed corner and crevice cleaning. Our Brooklyn cleaning professionals spend 4-6 hours thoroughly cleaning your property from top to bottom. We serve Park Slope brownstones, Williamsburg apartments, Astoria homes, and Manhattan condos with deep cleaning expertise.\n\nDeep cleaning is ideal for Brooklyn homes that haven't been professionally cleaned in months, before or after moving, spring cleaning in NYC apartments, or preparing your property for special occasions. V & N Cleaning Services brings specialized equipment and eco-friendly cleaning products to deliver exceptional deep cleaning results throughout Brooklyn, Queens, and Manhattan.",
       features: [
         "Everything in regular cleaning",
         "Baseboards and trim cleaning",
@@ -40,8 +40,8 @@ const Services = () => {
     },
     {
       icon: Building2,
-      title: "Apartment Cleaning",
-      description: "Specialized cleaning for NYC apartments, condos, and small spaces. We understand the unique needs of city living.",
+      title: "NYC Apartment Cleaning Services - Brooklyn & Queens",
+      description: "V & N Cleaning Services specializes in apartment cleaning throughout Brooklyn, Queens, and Manhattan. Our apartment cleaning team understands the unique challenges of NYC apartment living including limited space, building requirements, and tight schedules. We provide efficient apartment cleaning for studios, 1-bedroom, 2-bedroom, and 3-bedroom apartments in Park Slope, Williamsburg, Astoria, Upper East Side, and throughout NYC.\n\nApartment cleaning from V & N is designed for NYC renters and condo owners who need flexible, professional cleaning services. We work with building management, navigate service elevator schedules, and complete apartment cleaning efficiently without disrupting your neighbors. Our team specializes in small space optimization, vertical storage area cleaning, and compact appliance care specific to Brooklyn and Manhattan apartments.\n\nWhether you need weekly apartment cleaning in Williamsburg, bi-weekly cleaning for your Park Slope rental, or one-time deep cleaning for your Astoria condo, V & N Cleaning Services delivers reliable apartment cleaning throughout New York City. We serve co-op apartments, rental apartments, luxury condos, and walk-up buildings across all five boroughs.",
       features: [
         "Efficient cleaning for smaller spaces",
         "Quick turnaround available",
@@ -53,8 +53,8 @@ const Services = () => {
     },
     {
       icon: Package,
-      title: "Move-In/Move-Out Cleaning",
-      description: "Comprehensive cleaning for moving transitions. Get your security deposit back or move into a pristine new home.",
+      title: "Move-Out Cleaning in Brooklyn & NYC - Get Your Deposit Back",
+      description: "V & N Cleaning Services provides thorough move-in and move-out cleaning for Brooklyn apartments, Queens homes, and Manhattan condos. Our move-out cleaning service helps renters get their full security deposit back and prepares properties for new tenants. We serve landlords, property managers, and renters throughout Park Slope, Williamsburg, Astoria, and all NYC neighborhoods.\n\nMove-out cleaning includes empty home deep cleaning, all cabinets and closets, wall spot treatment, floor deep cleaning, appliance interior cleaning, light fixture cleaning, and landlord inspection preparation. Our Brooklyn cleaning team understands what landlords and property managers expect for move-out inspections. We clean to the highest standards, ensuring your Brooklyn or Queens apartment is rent-ready or deposit-return ready.\n\nMove-in cleaning from V & N prepares your new Brooklyn apartment or NYC home before you unpack. We deep clean the entire property so you can move into a fresh, sanitized space. Whether you're moving out of a Williamsburg loft, preparing a Park Slope brownstone for new tenants, or moving into an Astoria apartment, V & N Cleaning Services delivers professional move-in/move-out cleaning throughout New York City.",
       features: [
         "Empty home deep cleaning",
         "All cabinets and closets",
@@ -67,8 +67,8 @@ const Services = () => {
     },
     {
       icon: Briefcase,
-      title: "Office Cleaning",
-      description: "Professional workspace cleaning for small offices, co-working spaces, and commercial properties.",
+      title: "Small Office Cleaning in Brooklyn & Manhattan",
+      description: "V & N Cleaning Services provides professional office cleaning for small offices, co-working spaces, and commercial properties in Brooklyn, Manhattan, and Queens. Our office cleaning team delivers reliable workspace sanitization, common area maintenance, and professional cleaning for NYC businesses. We serve offices in Park Slope, Williamsburg, Midtown Manhattan, and throughout the five boroughs.\n\nOffice cleaning from V & N includes desk and workspace sanitization, common area cleaning, break room maintenance, restroom cleaning, trash and recycling, and floor care. We offer flexible scheduling including after-hours office cleaning and weekend services to minimize disruption to your Brooklyn or Manhattan business. Our team uses commercial-grade cleaning products and equipment suitable for professional workspaces.\n\nWhether you operate a small business in Brooklyn, a co-working space in Manhattan, or a professional office in Queens, V & N Cleaning Services delivers consistent office cleaning services. We work with office managers, business owners, and property managers throughout NYC to maintain clean, professional workspaces.",
       features: [
         "Desk and workspace sanitization",
         "Common area cleaning",
@@ -164,8 +164,19 @@ const Services = () => {
                 <div>
                   <h3 className="font-semibold mb-2">What areas do you serve?</h3>
                   <p className="text-muted-foreground">
-                    We serve Brooklyn, Queens, Manhattan, The Bronx, and surrounding NYC areas. 
-                    Contact us to confirm service availability in your specific neighborhood.
+                    V & N Cleaning Services serves Brooklyn neighborhoods including Park Slope, Williamsburg, Brooklyn Heights, DUMBO, Bushwick, Crown Heights, and Prospect Heights. In Queens, we provide cleaning in Astoria, Long Island City, Forest Hills, and Flushing. Our Manhattan service area includes the Upper East Side, Upper West Side, Midtown, and Chelsea. We also serve Riverdale and Fordham in The Bronx. V & N Cleaning Services is a Brooklyn-based residential cleaning company serving all five NYC boroughs. Call (347) 357-1090 to confirm we serve your specific Brooklyn or NYC neighborhood.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">What types of properties do you clean?</h3>
+                  <p className="text-muted-foreground">
+                    V & N Cleaning Services cleans Brooklyn apartments (studio to 3-bedroom), NYC condos and co-ops, brownstones and townhouses, single-family homes, and rental properties. We specialize in NYC apartment cleaning, understanding the unique needs of small spaces, building requirements, and city living. Whether you have a 500 sq ft Williamsburg studio or a 2,500 sq ft Park Slope brownstone, our cleaning team adapts to your property type.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Do you offer eco-friendly cleaning in Brooklyn?</h3>
+                  <p className="text-muted-foreground">
+                    Yes! V & N Cleaning Services offers green cleaning options for Brooklyn and NYC homes. Our eco-friendly cleaning service uses EPA-approved, non-toxic cleaning products that are safe for children, pets, and the environment. Brooklyn families in Park Slope, Prospect Heights, and Williamsburg frequently choose our green cleaning option for apartment and home cleaning. All eco-friendly products are available at no additional cost.
                   </p>
                 </div>
                 <div>
